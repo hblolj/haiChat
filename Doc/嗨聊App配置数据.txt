@@ -1,6 +1,6 @@
-¸öÍÆ¹ÙÍø:http://www.getui.com/cn/index.html
+ä¸ªæ¨ä¸‹è½½åœ°å€:http://www.getui.com/cn/index.html
 
-°üÃû:com.hblolj.haichat
+ä¸ªæ¨åŒ…å:com.hblolj.haichat
 
 AppID:O0NBT5fdMH9yAZ85J6W3K5
 
@@ -11,11 +11,11 @@ AppKey:8kfvQBdKBQ7SLDGKiWtt57
 MasterSecret:hLlnjFywr070n3STUnxky1
 
 
-°¢ÀïÔÆ¹ÙÍø:https://www.aliyun.com/
+é˜¿é‡Œäº‘å®˜ç½‘:https://www.aliyun.com/
 
 
 
-ÆßÅ£ÔÆ¹ÙÍø:https://www.qiniu.com/
+ä¸ƒç‰›å®˜ç½‘:https://www.qiniu.com/
 
 AccessKey:wNa1ardvNFsdBp2CoiJQRTvbShbWmrdh2hkwju2X
 
