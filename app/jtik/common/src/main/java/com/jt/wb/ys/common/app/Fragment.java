@@ -41,8 +41,7 @@ public abstract class Fragment extends android.support.v4.app.Fragment{
             }
         }
 
-
-        return super.onCreateView(inflater, container, savedInstanceState);
+        return mRoot;
     }
 
     @Override
