@@ -97,7 +97,7 @@ public abstract class RecyclerAdapter<Data> extends RecyclerView.Adapter<Recycle
 
     /**
      * 插入一条数据并刷新
-     * @param data
+     * @param data 数据
      */
     public void add(Data data){
         mDataList.add(data);
@@ -106,7 +106,7 @@ public abstract class RecyclerAdapter<Data> extends RecyclerView.Adapter<Recycle
 
     /**
      * 插入一堆数据，并刷新
-     * @param dataList
+     * @param dataList 新数据
      */
     public void add(Data... dataList){
         if (dataList != null && dataList.length > 0){
@@ -118,7 +118,7 @@ public abstract class RecyclerAdapter<Data> extends RecyclerView.Adapter<Recycle
 
     /**
      * 插入一堆数据，并刷新
-     * @param dataList
+     * @param dataList 新数据
      */
     public void add(Collection<Data> dataList){
         if (dataList != null && dataList.size() > 0){
@@ -135,7 +135,7 @@ public abstract class RecyclerAdapter<Data> extends RecyclerView.Adapter<Recycle
 
     /**
      * 数据替换为一个新的集合
-     * @param dataList
+     * @param dataList 新数据
      */
     public void replace(Collection<Data> dataList){
         mDataList.clear();
@@ -206,7 +206,7 @@ public abstract class RecyclerAdapter<Data> extends RecyclerView.Adapter<Recycle
 
         /**
          * 用户绑定数据的触发
-         * @param data
+         * @param data 数据
          */
         void bind(Data data){
             this.mData = data;
@@ -215,13 +215,13 @@ public abstract class RecyclerAdapter<Data> extends RecyclerView.Adapter<Recycle
 
         /**
          * 当触发绑定数据的时候，会触发，必须复写
-         * @param data
+         * @param data 数据
          */
         protected abstract void onBind(Data data);
 
         /**
          * Holder 对自己对应的 Holder 进行更新
-         * @param data
+         * @param data 数据
          */
         public void updateData(Data data){
             if (this.callback != null){

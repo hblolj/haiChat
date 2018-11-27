@@ -20,7 +20,8 @@ import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.ViewTarget;
 import com.jt.wb.ys.common.app.Activity;
-import com.jt.wb.ys.common.widget.a.PortraitView;
+import com.jt.wb.ys.common.widget.PortraitView;
+import com.jt.wb.ys.jtik.activities.AccountActivity;
 import com.jt.wb.ys.jtik.fragments.main.ActiveFragment;
 import com.jt.wb.ys.jtik.fragments.main.ContactFragment;
 import com.jt.wb.ys.jtik.fragments.main.GroupFragment;
@@ -115,7 +116,7 @@ public class MainActivity extends Activity implements BottomNavigationView.OnNav
 
     @OnClick(R.id.btn_action)
     public void onActionClick(){
-
+        AccountActivity.show(this);
     }
 
     /**

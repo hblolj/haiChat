@@ -29,7 +29,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
 
-public class GalleyView extends RecyclerView {
+public class GalleryView extends RecyclerView {
 
     private static final int LOADER_ID = 0X100;
 
@@ -46,17 +46,17 @@ public class GalleyView extends RecyclerView {
 
     private SelectChangeListener mListener;
 
-    public GalleyView(Context context) {
+    public GalleryView(Context context) {
         super(context);
         init();
     }
 
-    public GalleyView(Context context, AttributeSet attrs) {
+    public GalleryView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public GalleyView(Context context, AttributeSet attrs, int defStyle) {
+    public GalleryView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init();
     }
@@ -67,7 +67,7 @@ public class GalleyView extends RecyclerView {
 
         setAdapter(mAdapter);
 
-        mAdapter.setmListener(new RecyclerAdapter.AdapterListenerImpl<GalleyView.Image>() {
+        mAdapter.setmListener(new RecyclerAdapter.AdapterListenerImpl<GalleryView.Image>() {
 
             @Override
             public void onItemClick(RecyclerAdapter.ViewHolder holder, Image image) {
@@ -297,7 +297,7 @@ public class GalleyView extends RecyclerView {
 
         @Override
         protected ViewHolder<Image> onCreateViewHolder(android.view.View root, int viewType) {
-            return new GalleyView.ViewHolder(root);
+            return new GalleryView.ViewHolder(root);
         }
     }
 

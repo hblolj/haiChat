@@ -2,7 +2,7 @@ package com.jt.wb.ys.jtik.fragments.main;
 
 
 import com.jt.wb.ys.common.app.Fragment;
-import com.jt.wb.ys.common.widget.GalleyView;
+import com.jt.wb.ys.common.widget.GalleryView;
 import com.jt.wb.ys.jtik.R;
 
 import butterknife.BindView;
@@ -12,8 +12,8 @@ import butterknife.BindView;
  */
 public class ActiveFragment extends Fragment {
 
-    @BindView(R.id.galleyView)
-    GalleyView mGalley;
+    @BindView(R.id.galleryView)
+    GalleryView mGalley;
 
     public ActiveFragment() {
         // Required empty public constructor
@@ -28,7 +28,7 @@ public class ActiveFragment extends Fragment {
     protected void initData() {
         super.initData();
 
-        mGalley.setUp(getLoaderManager(), new GalleyView.SelectChangeListener() {
+        mGalley.setUp(getLoaderManager(), new GalleryView.SelectChangeListener() {
             @Override
             public void onSelectedCountChange(int count) {
 

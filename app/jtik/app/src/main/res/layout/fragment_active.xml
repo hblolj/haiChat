@@ -6,12 +6,12 @@
     android:orientation="vertical"
     tools:context=".fragments.main.ActiveFragment">
 
-    <com.jt.wb.ys.common.widget.GalleyView
-        android:id="@+id/galleyView"
+    <com.jt.wb.ys.common.widget.GalleryView
+        android:id="@+id/galleryView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="1dp">
 
-    </com.jt.wb.ys.common.widget.GalleyView>
+    </com.jt.wb.ys.common.widget.GalleryView>
 
 </FrameLayout>
