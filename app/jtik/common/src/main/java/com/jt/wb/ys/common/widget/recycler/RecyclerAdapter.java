@@ -64,7 +64,7 @@ public abstract class RecyclerAdapter<Data> extends RecyclerView.Adapter<Recycle
         // 设置 View 的 Tag 为 ViewHolder，进行双向绑定
         root.setTag(R.id.tag_recycler_holder, holder);
 
-        // 设置时间点击
+        // 设置事件点击
         root.setOnClickListener(this);
         root.setOnLongClickListener(this);
 
@@ -139,11 +139,21 @@ public abstract class RecyclerAdapter<Data> extends RecyclerView.Adapter<Recycle
      */
     public void replace(Collection<Data> dataList){
         mDataList.clear();
-        if (mDataList == null || mDataList.size() == 0){
+        if (dataList == null || dataList.size() == 0){
             return;
         }
         mDataList.addAll(dataList);
         notifyDataSetChanged();
+    }
+
+    @Override
+    public void update(Data data, ViewHolder<Data> holder) {
+        int position = holder.getAdapterPosition();
+        if (position >= 0){
+            mDataList.remove(position);
+            mDataList.add(position, data);
+            notifyItemChanged(position);
+        }
     }
 
     @Override
@@ -217,6 +227,23 @@ public abstract class RecyclerAdapter<Data> extends RecyclerView.Adapter<Recycle
             if (this.callback != null){
                 this.callback.update(data, this);
             }
+        }
+    }
+
+    /**
+     * 对回调接口做一次实现
+     * @param <Data>
+     */
+    public static abstract class AdapterListenerImpl<Data> implements AdapterListener<Data>{
+
+        @Override
+        public void onItemClick(ViewHolder holder, Data data) {
+
+        }
+
+        @Override
+        public void onItemLongClick(ViewHolder holder, Data data) {
+
         }
     }
 }

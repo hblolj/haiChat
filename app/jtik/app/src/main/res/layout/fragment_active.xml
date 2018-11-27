@@ -3,15 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".fragments.main.ActiveFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:textSize="@dimen/len_40"
-        android:gravity="center"
-        android:textColor="@color/black"
+    <com.jt.wb.ys.common.widget.GalleyView
+        android:id="@+id/galleyView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Active" />
+        android:padding="1dp">
+
+    </com.jt.wb.ys.common.widget.GalleyView>
 
 </FrameLayout>

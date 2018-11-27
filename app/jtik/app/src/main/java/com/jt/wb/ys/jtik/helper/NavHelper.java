@@ -153,7 +153,7 @@ public class NavHelper<T> {
     }
 
     /**
-     * 定义时间处理完成后的回调接口
+     * 定义事件处理完成后的回调接口
      * @param <T>
      */
     public interface OnTabChangedListener<T>{
