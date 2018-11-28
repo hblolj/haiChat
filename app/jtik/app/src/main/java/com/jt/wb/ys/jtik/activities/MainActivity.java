@@ -1,19 +1,16 @@
-package com.jt.wb.ys.jtik;
+package com.jt.wb.ys.jtik.activities;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AnticipateOvershootInterpolator;
 import android.widget.FrameLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
@@ -21,7 +18,7 @@ import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.ViewTarget;
 import com.jt.wb.ys.common.app.Activity;
 import com.jt.wb.ys.common.widget.PortraitView;
-import com.jt.wb.ys.jtik.activities.AccountActivity;
+import com.jt.wb.ys.jtik.R;
 import com.jt.wb.ys.jtik.fragments.main.ActiveFragment;
 import com.jt.wb.ys.jtik.fragments.main.ContactFragment;
 import com.jt.wb.ys.jtik.fragments.main.GroupFragment;
@@ -57,6 +54,14 @@ public class MainActivity extends Activity implements BottomNavigationView.OnNav
     FloatActionButton mAction;
 
     private NavHelper<Integer> navHelper;
+
+    /**
+     * MainActivity 显示的入口
+     * @param context 上下文
+     */
+    public static void show(Context context){
+        context.startActivity(new Intent(context, MainActivity.class));
+    }
 
     @Override
     protected int getContentLayoutId() {
@@ -96,12 +101,6 @@ public class MainActivity extends Activity implements BottomNavigationView.OnNav
     @Override
     protected void initWindows() {
         super.initWindows();
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
-                || ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
-            // 文件读取与存储权限
-            ActivityCompat.requestPermissions(MainActivity.this,
-                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
-        }
     }
 
     @Override
@@ -165,22 +164,5 @@ public class MainActivity extends Activity implements BottomNavigationView.OnNav
                 .setInterpolator(new AnticipateOvershootInterpolator(1))
                 .setDuration(480)
                 .start();
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        switch (requestCode){
-            case 1:
-                if (grantResults.length > 0){
-                    if (grantResults[0] != PackageManager.PERMISSION_GRANTED){
-                        Toast.makeText(this, "存储权限未被允许!", Toast.LENGTH_SHORT).show();
-                        finish();
-                    }else if (grantResults[1] != PackageManager.PERMISSION_GRANTED){
-                        Toast.makeText(this, "存储读取权限未被允许!", Toast.LENGTH_SHORT).show();
-                        finish();
-                    }
-                }
-                break;
-        }
     }
 }

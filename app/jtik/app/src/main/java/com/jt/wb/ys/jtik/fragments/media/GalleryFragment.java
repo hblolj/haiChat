@@ -79,7 +79,10 @@ public class GalleryFragment extends BottomSheetDialogFragment implements Galler
         void onSelectedImage(String path);
     }
 
-    private static class TransStatusBottomSheetDialog extends BottomSheetDialog{
+    /**
+     * 为了解决顶部状态栏变黑而写的 TransStatusBottomSheetDialog
+     */
+    public static class TransStatusBottomSheetDialog extends BottomSheetDialog{
 
         public TransStatusBottomSheetDialog(@NonNull Context context) {
             super(context);

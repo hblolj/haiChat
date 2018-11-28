@@ -28,11 +28,11 @@ public class ActiveFragment extends Fragment {
     protected void initData() {
         super.initData();
 
-        mGalley.setUp(getLoaderManager(), new GalleryView.SelectChangeListener() {
-            @Override
-            public void onSelectedCountChange(int count) {
-
-            }
-        });
+//        mGalley.setUp(getLoaderManager(), new GalleryView.SelectChangeListener() {
+//            @Override
+//            public void onSelectedCountChange(int count) {
+//
+//            }
+//        });
     }
 }

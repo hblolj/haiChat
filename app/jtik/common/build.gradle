@@ -35,9 +35,11 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
     implementation "de.hdodenhof:circleimageview:$rootProject.ext.circleimageviewVersion"
     implementation "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
+    implementation "net.qiujuer.genius:kit-handler:$rootProject.ext.geniusVersion"
+
     annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeVersion"
 
-    implementation project(':lang')
+    api project(path: ':lang')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'

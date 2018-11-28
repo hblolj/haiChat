@@ -34,8 +34,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation project(':common')
-    implementation project(path: ':common')
+    api project(path: ':factory')
+    implementation "pub.devrel:easypermissions:$rootProject.ext.easyPMVersion"
     implementation "com.github.yalantis:ucrop:$rootProject.ext.ucropVersion"
     implementation "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
     annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeVersion"
