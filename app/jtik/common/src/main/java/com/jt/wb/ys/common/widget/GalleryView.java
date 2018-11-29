@@ -150,7 +150,6 @@ public class GalleryView extends RecyclerView {
                         image.id = id;
                         image.path = path;
                         image.date = date;
-                        Log.d("获取到的资源", "onLoadFinished: " + image.toString());
                         images.add(image);
 
                     }while (data.moveToNext());

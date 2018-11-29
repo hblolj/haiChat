@@ -4,10 +4,13 @@ package com.jt.wb.ys.jtik.fragments.account;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.util.Log;
 
 import com.bumptech.glide.Glide;
 import com.jt.wb.ys.common.app.Application;
 import com.jt.wb.ys.common.widget.PortraitView;
+import com.jt.wb.ys.factory.Factory;
+import com.jt.wb.ys.factory.net.UploadHelper;
 import com.jt.wb.ys.jtik.R;
 import com.jt.wb.ys.jtik.fragments.media.GalleryFragment;
 import com.yalantis.ucrop.UCrop;
@@ -64,6 +67,16 @@ public class UpdateUserInfoFragment extends com.jt.wb.ys.common.app.Fragment {
                 .asBitmap()
                 .centerCrop()
                 .into(mPortraitView);
+
+        // 拿到本地文件的地址
+        String localPath = uri.getPath();
+        Log.e("TAG", "localPath: " + localPath);
+
+        Factory.runOnAsync(() -> {
+            String url = UploadHelper.uploadPortrait(localPath);
+            Log.e("TAG", "url: " + url);
+        });
+
     }
 
     @Override
