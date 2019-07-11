@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hblolj.haichat.dao.PushHistoryMapper" >
+  <resultMap id="BaseResultMap" type="com.hblolj.haichat.dataobject.PushHistory" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="arrivalAt" property="arrivalat" jdbcType="TIMESTAMP" />
+    <result column="createdAt" property="createdat" jdbcType="TIMESTAMP" />
+    <result column="entityType" property="entitytype" jdbcType="INTEGER" />
+    <result column="receiverId" property="receiverid" jdbcType="VARCHAR" />
+    <result column="receiverPushId" property="receiverpushid" jdbcType="VARCHAR" />
+    <result column="senderId" property="senderid" jdbcType="VARCHAR" />
+    <result column="updateAt" property="updateat" jdbcType="TIMESTAMP" />
+    <result column="entity" property="entity" jdbcType="LONGVARBINARY" />
+  </resultMap>
+</mapper>

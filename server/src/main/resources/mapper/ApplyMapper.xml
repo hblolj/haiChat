@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hblolj.haichat.dao.ApplyMapper" >
+  <resultMap id="BaseResultMap" type="com.hblolj.haichat.dataobject.Apply" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="applicantId" property="applicantid" jdbcType="VARCHAR" />
+    <result column="createdAt" property="createdat" jdbcType="TIMESTAMP" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="targetId" property="targetid" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="updatedAt" property="updatedat" jdbcType="TIMESTAMP" />
+    <result column="attach" property="attach" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>
